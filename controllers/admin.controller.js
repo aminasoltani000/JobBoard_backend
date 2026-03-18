@@ -18,12 +18,7 @@ exports.getDashboard = async (req, res) => {
         // Nombre de candidatures rejetées
         const rejectedCandidatures = await Candidature.countDocuments({ status: 'rejected' });
         
-        // Liste des dernières candidatures (les 10 dernières par exemple)
-        // const recentCandidatures = await Candidature.find()
-        //     .populate('userId', 'email')
-        //     .populate('jobId', 'title company')
-        //     .sort({ _id: -1 })
-        //     .limit(10);
+       
         
         res.status(200).json({
             totalJobs,

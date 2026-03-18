@@ -83,6 +83,8 @@ exports.getMe = async (req, res) => {
         }
         
         res.status(200).json(user); //renvoyer utulisateure avec sesinfos 
+
+
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
